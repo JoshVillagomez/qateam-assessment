@@ -1,0 +1,31 @@
+Execution Summary:
+
+Total Test Cases Executed	14
+Passed Test Cases	13
+Failed Test Cases	1
+Pass Rate	92.86%
+
+
+Defects Log:
+
+ID	1
+
+Scenario: Verify the failure scenario for an invalid search query	
+
+Description: The search results do not display a clear message indicating that no results were found for the invalid movie title.	
+
+Priority: Medium
+
+
+Analysis:
+
+Relation to the test subject or main user flow:
+The failed test case for the invalid search query is directly related to the search functionality, which is a core feature of the HOYTS Cinemas main page. This test case is essential to ensure that the website provides a clear and informative response when users search for invalid movie titles.
+
+The remaining test cases cover various sections and features of the HOYTS Cinemas main page, which are all part of the main user flow and provide a comprehensive understanding of the website's overall functionality.
+
+Priority:
+The failed test case is classified as a medium priority, as it does not completely stop the usage of the website. However, it can potentially impact the user experience, as users may expect a more informative response when searching for invalid movie titles.
+
+The issue can be fixed in a more planned way, as it does not represent a blocker that prevents the core functionality of the website from working. It can be addressed in a future release or update, as part of the ongoing maintenance and improvement of the website.
+Overall, the test results indicate that the HOYTS Cinemas main page is functioning well, with a high pass rate of 92.86%. The single failed test case related to the invalid search query response represents an area for improvement, but it does not significantly impact the main user flow or core functionality of the website. The defect can be addressed in a more planned manner, as part of the website's ongoing development and optimization.

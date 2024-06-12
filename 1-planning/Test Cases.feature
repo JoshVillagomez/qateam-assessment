@@ -1,8 +1,11 @@
 Planning:
 HOYTS Cinemas Homepage
 Objective: Execute functional testing of the HOYTS cinemas main page
-
 Test Plan:
+Feature: HOYTS Cinemas Main page
+As a user
+I want to have a good experience in the website
+So i can book my favorite movies
 
 Scenario 1: Verify the homepage content
 Given I am on the HOYTS Cinemas main page
@@ -27,23 +30,29 @@ Scenario 5: Verify the "HOYTS Rewards" section
 Given I am on the HOYTS Cinemas homepage
 Then I should see the "HOYTS Rewards" section with information about the different rewards
 
-Scenario 6: Verify the "Offers & Promotions" section
+Scenario 6: Verify the "Login" section
 Given I am on the HOYTS Cinemas main page
-Then I should see the "Offers & Promotions" section with information about current offers and promotions
+When I click on the "Login" link in the top right corner
+Then I should see the "Sign in to My Rewards" promt displayed
 
-Scenario 7: Verify the "Experiences" section
+Scenario 7: Attempt to login with an invalid email
 Given I am on the HOYTS Cinemas main page
-Then I should see the "Experiences" section with information about different cinema experiences
+When I click the "Login" link in the top right corner
+Then the "Sign in to My Rewards" promt is displayed
+When I enter an invalid email address
+And I enter a valid password
+And I click the "Login" button
+Then an error message is displayed indicating that the email is invalid
 
-Scenario 8: Verify the "Accessibility" information
+Scenario 8: Verify the "Experiences" information
 Given I am on the HOYTS Cinemas main page
-Then I should see the "Accessibility" information section
+Then I should see the "Experiences" information section
 
 Scenario 9: Verify the footer content
 Given I am on the HOYTS Cinemas main page
 Then I should see the footer with the copyright information, terms and conditions, and other relevant links
 
-Scenario 10 (Failure Scenario): Verify error message for an invalid movie search
+Scenario 10 (Failure Scenario): Verify error message for an invalid movie search (In this scenario when we input "Avengers Endgame" the page displays results even when it shouldnt.)
 Given I am on the HOYTS Cinemas main page
 When I enter an invalid movie title in the search bar and click the search button
 Then I should see an error message indicating that no results were found :
